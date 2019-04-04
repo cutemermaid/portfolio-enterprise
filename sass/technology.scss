@@ -1,0 +1,104 @@
+.technology-parent {
+  .technology {
+    padding-bottom: 71px;
+    @include extra-small-devices {
+      padding-bottom: 0px;
+    }
+    @include small-devices {
+      padding-bottom: 0px;
+    }
+    .heading {
+      padding-bottom: 50px;
+      text-align: center;
+      @include extra-small-devices {
+        padding-top: 35px;
+        padding-bottom: 1px;
+      }
+      @include small-devices {
+        padding-top: 35px;
+        padding-bottom: 1px;
+      }
+    }
+    h1 {
+      font-size: 34px;
+    }
+    .logo {
+      width: 100%;
+      align-items: center;
+      @include extra-small-devices {
+        padding-top: 0;
+        // padding-bottom: 20px;
+      }
+      @include small-devices {
+        padding-top: 0;
+        // padding-bottom: 20px;
+      }
+      .image {
+        height: 157px;
+        line-height: 157px;
+        border-bottom: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+        text-align: center;
+        flex-basis: auto;
+        @include extra-small-devices {
+          border-bottom: 1px solid $border-color;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+        @include small-devices {
+          border-bottom: 1px solid $border-color;
+          padding-bottom: 15px;
+          padding-top: 15px;
+        }
+        &:nth-child(2) {
+          @include extra-small-devices {
+            border-right: none;
+          }
+          @include small-devices {
+            border-right: none;
+          }
+        }
+        &:nth-child(4) {
+          border-right: none;
+        }
+        &:nth-child(5) {
+          border-bottom: none;
+          @include extra-small-devices {
+            border-bottom: 1px solid $border-color;
+          }
+          @include small-devices {
+            border-bottom: 1px solid $border-color;
+          }
+        }
+        &:nth-child(6) {
+          border-bottom: none;
+          @include extra-small-devices {
+            border-bottom: 1px solid $border-color;
+            border-right: none;
+          }
+          @include small-devices {
+            border-bottom: 1px solid $border-color;
+            border-right: none;
+          }
+        }
+        &:nth-child(7) {
+          border-bottom: none;
+          @include extra-small-devices {
+          }
+          @include small-devices {
+          }
+        }
+        &:nth-child(8) {
+          border-right: none;
+          border-bottom: none;
+          // @include extra-small-devices {
+          //   border-bottom: 1px solid $border-color;
+          // }
+          // @include small-devices {
+          //   border-bottom: 1px solid $border-color;
+          // }
+        }
+      }
+    }
+  }
+}

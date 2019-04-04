@@ -1,0 +1,108 @@
+.carosal {
+  position: relative;
+  // background: #f19a89;
+  // color: #ffffff;
+  background: #f7f7f7;
+  padding-bottom: 30px;
+  color: black;
+  display: flex;
+  @include extra-small-devices {
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include small-devices {
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .carosal-wrap {
+    flex: 1;
+    padding-top: 30px;
+    @include extra-small-devices {
+      flex: none;
+    }
+    @include small-devices {
+      flex: none;
+    }
+    .carosal-slide {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      display: none;
+      padding-left: 150px;
+      padding-right: 150px;
+      @include extra-small-devices {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include small-devices {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      &:first-child {
+        display: block;
+      }
+
+      &.animated {
+        animation-duration: 0.5s;
+      }
+      .what-we-do {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        padding-top: 30px;
+        @include extra-small-devices {
+          margin-bottom: 15px;
+        }
+        @include small-devices {
+          margin-bottom: 15px;
+        }
+      }
+
+      .heading {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      .carosal-info {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+    }
+  }
+  .dots {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 90px;
+    padding-top: 120px;
+    @include extra-small-devices {
+      display: inline;
+      text-align: center;
+      flex-direction: row;
+      margin-right: 0px;
+      padding-top: 0px;
+      margin-top: 30px;
+    }
+    @include small-devices {
+      display: inline;
+      text-align: center;
+      flex-direction: row;
+      margin-right: 0px;
+      padding-top: 0px;
+      margin-top: 20px;
+    }
+
+    img {
+      margin-bottom: 20px;
+      border: 5px solid transparent;
+
+      &.active {
+        border-color: #212121;
+        border-radius: 50%;
+      }
+    }
+  }
+}

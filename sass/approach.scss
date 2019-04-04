@@ -1,0 +1,163 @@
+.approach-parent {
+  padding: 20px 30px;
+  padding-top: 0;
+  padding-bottom: 0px;
+  margin-top: -160px;
+  color: $footer-color;
+  .approach {
+    .approach-heading {
+      font-size: 25px;
+      padding-top: 60px;
+      @include extra-small-devices {
+        text-align: center;
+      }
+      @include small-devices {
+        text-align: center;
+      }
+    }
+    .approach-info-wrap {
+      font-size: 16px;
+      display: flex;
+      @include extra-small-devices {
+        flex-direction: column;
+      }
+      @include small-devices {
+        flex-direction: column;
+      }
+      input {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .approach-us {
+        padding-top: 50px;
+        padding-right: 65px;
+        text-align: justify;
+        @include extra-small-devices {
+          padding-right: 0px;
+        }
+        @include small-devices {
+          padding-right: 0px;
+        }
+      }
+      form {
+        width: 500px;
+        margin-right: 30px;
+        margin-top: 40px;
+        @include extra-small-devices {
+          width: 100%;
+          margin-right: 0px;
+          margin: 20px auto;
+        }
+        @include small-devices {
+          width: 100%;
+          margin-right: 0px;
+          margin: 20px auto;
+        }
+      }
+
+      fieldset {
+        width: 400px;
+        position: relative;
+        border: none;
+        @include extra-small-devices {
+          width: 100%;
+        }
+        @include small-devices {
+          width: 100%;
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 22px;
+        color: black;
+        transform-origin: left;
+        transition: all 0.3s ease;
+        left: 25px;
+        cursor: text;
+      }
+
+      input:focus ~ label {
+        color: #212121;
+      }
+
+      input:focus ~ label,
+      input:valid ~ label {
+        top: 12px;
+        left: 27px;
+        transform: scale(0.6, 0.6);
+      }
+
+      input {
+        width: 100%;
+        height: 38px;
+        border: none;
+        margin-top: 10px;
+        padding-top: 12px;
+        padding-left: 15px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .after {
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, #f9c600 50%, transparent 50%);
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        transition: all 0.6s ease;
+      }
+
+      input:focus ~ .after {
+        background-position: 0 0;
+      }
+
+      button {
+        background: $button-background;
+        border-radius: 17px;
+        height: 37px;
+        position: relative;
+        width: 100px;
+        font-size: 16px;
+        font-family: system-ui, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        margin-top: 20px;
+        padding: 2px 10px;
+        // color: rgba(0, 0, 0, 0.4);
+        // background: white;
+        border: none;
+        // background: linear-gradient(to right, #f9c600 50%, transparent 50%);
+        // background-color: rgba(0, 0, 0, 0.3);
+        // color: black;
+        color: white;
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        transition: all 0.6s ease;
+      }
+
+      // button:before {
+      //   position: absolute;
+      //   content: "Submit";
+      //   top: 2px;
+      //   bottom: 2px;
+      //   left: 2px;
+      //   right: 2px;
+      //   display: block;
+      //   background-color: white;
+      // }
+
+      button:active,
+      button:focus,
+      button:hover {
+        outline: none;
+        background-position: 0 0;
+        // color: #212121;
+        background-color: darken(#09d261, 10%);
+      }
+    }
+  }
+}

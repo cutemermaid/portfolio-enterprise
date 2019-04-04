@@ -1,0 +1,223 @@
+.menu-items-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ffd42d;
+  display: none;
+  z-index: 9999;
+  flex-direction: column;
+  padding: 10px;
+  overflow: hidden;
+
+  > div {
+    background: white;
+    height: 100%;
+
+    // position: relative;
+    // .crossover::before {
+    //   content: "";
+    //   background-color: rgba(0, 0, 0, 0.03);
+    //   position: absolute;
+    //   top: 70%;
+    //   left: 0;
+    //   transform-origin: 50% 0;
+    //   transition: transform 0.9s cubic-bezier(0.52, 0.01, 0.16, 1),
+    //     background 0.26s linear;
+    //   width: 300vw;
+    //   height: 300vw;
+    //   margin-left: -150vw;
+    //   transform: rotate(-16deg);
+    // }
+  }
+
+  .header-wrap {
+    display: flex;
+    height: 200px;
+    padding: 0 15px;
+    @include extra-small-devices {
+      height: 70px;
+    }
+    @include small-devices {
+      height: 70px;
+    }
+
+    .logo {
+      line-height: 200px;
+      @include extra-small-devices {
+        line-height: 70px;
+      }
+      @include small-devices {
+        line-height: 70px;
+      }
+
+      img {
+        width: 200px;
+        margin-left: 100px;
+        @include extra-small-devices {
+          width: 75px;
+          margin-left: 0px;
+        }
+        @include small-devices {
+          width: 75px;
+          margin-left: 0px;
+        }
+        @include medium-devices {
+          margin-left: 0px;
+        }
+      }
+    }
+    .cross {
+      margin-left: auto;
+      margin-right: 97px;
+      text-align: center;
+      font-weight: 900;
+      // line-height: 200px;
+      padding-top: 38px;
+      font-size: 35px;
+      width: 40px;
+      cursor: pointer;
+      color: #212121;
+      @include extra-small-devices {
+        line-height: 70px;
+        margin-right: -6px;
+      }
+      @include small-devices {
+        line-height: 70px;
+        margin-right: -6px;
+      }
+      @include medium-devices {
+        margin-right: -6px;
+      }
+      @include large-devices {
+        padding-top: 26px;
+        margin-right: 93px;
+        font-size: 43px;
+      }
+    }
+  }
+  .cross-wrap {
+    display: flex;
+    flex: 1;
+
+    .heading {
+      width: 300px;
+      margin-left: 115px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0px;
+
+      &:nth-child(1) {
+        flex: 1;
+        @include large-devices {
+          width: 260px;
+          flex: none;
+        }
+        // @include extra-large-devices {
+        //   width: 400px;
+        // }
+      }
+
+      &:nth-child(2) {
+        width: 150px;
+        @include large-devices {
+          width: 300px;
+        }
+        @include extra-large-devices {
+          width: 300px;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 200px;
+        @include large-devices {
+          width: 400px;
+        }
+        @include extra-large-devices {
+          width: 400px;
+        }
+      }
+
+      @include extra-small-devices {
+        margin-left: 20px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+      @include small-devices {
+        margin-left: 20px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+      @include medium-devices {
+        margin-left: 25px;
+      }
+
+      > .work-items {
+        font-size: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+        a {
+          text-decoration: none;
+          color: #212121;
+          &:hover {
+            text-decoration: underline #ffd42d;
+          }
+        }
+      }
+
+      .social {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: gray;
+      }
+
+      > .social-items {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        a {
+          text-decoration: none;
+          color: #212121;
+          &:hover {
+            text-decoration: underline #ffd42d;
+          }
+        }
+      }
+
+      .get-in-touch {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        color: gray;
+      }
+
+      > .getintouch-items {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        a {
+          text-decoration: none;
+          color: #212121;
+          &:hover {
+            text-decoration: underline #ffd42d;
+          }
+        }
+      }
+    }
+  }
+}

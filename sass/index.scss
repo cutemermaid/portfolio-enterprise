@@ -1,0 +1,44 @@
+@import url("normalize.css");
+@import url("animate.css");
+// @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+
+@import "./variables.scss";
+@import "./mixins.scss";
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  // font-family: "Source Sans Pro", sans-serif;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  color: #202020;
+  background-color: $page-background !important;
+}
+
+.divider {
+  width: 95%;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #ebecf0;
+}
+
+@import "header/header.scss";
+@import "./waves.scss";
+@import "./big-waves.scss";
+@import "./carosal.scss";
+@import "./section-about.scss";
+@import "./card.scss";
+@import "./technology.scss";
+@import "./wave-footer.scss";
+@import "./approach.scss";
+@import "./footer.scss";

@@ -1,0 +1,62 @@
+.waves {
+  height: 200px;
+
+  @keyframes animateTitleWaves {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: -200vw;
+    }
+  }
+
+  .company-header {
+    transform: translate3d(0, 0, 0);
+  }
+  .company-header {
+    animation: animateTitleWaves 20s linear infinite running;
+    color: #000;
+  }
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .company-header {
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: url("../image/header-wave-dark.svg");
+      background-position-x: 0;
+      background-position-y: 71%;
+      background-repeat: repeat-x;
+      background-size: 200vw;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+    }
+  }
+  .company-header--disabled {
+    -webkit-text-fill-color: #000;
+  }
+
+  .company-header,
+  .company-header _:-ms-lang(x) {
+    color: #000 !important;
+  }
+
+  .company-header-title {
+    margin: 0 0 0.30833em;
+    text-align: center;
+    @include large-devices {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    @include medium-devices {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+
+  @media (min-width: 72em) {
+    .company-header-title {
+      font-size: 7.5em;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.card-wrap {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  .row > .card {
+    border: none;
+    width: 18rem;
+    border: 1px solid #212121;
+    margin-bottom: 30px !important;
+    &:hover {
+      animation: 2s pulse;
+    }
+    img {
+      height: 300px;
+    }
+    .card-body {
+      background: #eaeaea;
+    }
+  }
+}

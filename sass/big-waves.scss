@@ -1,0 +1,48 @@
+.big-waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+
+  .ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #055b73;
+  }
+
+  .wave {
+    background: url(../image/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+
+    &:nth-child(1) {
+      opacity: 0.5;
+      left: -250px;
+      top: -228px;
+    }
+
+    &:nth-of-type(2) {
+      top: -175px;
+      animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite;
+      opacity: 1;
+      background-position-y: 12px;
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+}

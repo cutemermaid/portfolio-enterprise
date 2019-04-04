@@ -1,0 +1,148 @@
+#section-about {
+  .collage {
+    display: flex;
+    flex-wrap: wrap;
+
+    .collage-image {
+      position: relative;
+      height: 400px;
+      // border: 7.5px solid #f5f5f5;
+      // border-right: 7.5px solid #f4b400;
+      // border-left: 7.5px solid #f5f5f5;
+      // border-top: 7.5px solid #f5f5f5;
+      // border-bottom: 7.5px solid #f5f5f5;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      .filter {
+        @include extra-small-devices {
+          -webkit-filter: contrast(30%) brightness(130%) saturate(100%);
+          filter: contrast(30%) brightness(130%) saturate(100%) !important;
+        }
+        @include small-devices {
+          -webkit-filter: contrast(30%) brightness(130%) saturate(100%);
+          filter: contrast(30%) brightness(130%) saturate(100%) !important;
+        }
+        @include medium-devices {
+          -webkit-filter: contrast(30%) brightness(130%) saturate(100%);
+          filter: contrast(30%) brightness(130%) saturate(100%) !important;
+        }
+      }
+
+      &:hover {
+        .filter {
+          -webkit-filter: contrast(30%) brightness(130%) saturate(100%);
+          filter: contrast(30%) brightness(130%) saturate(100%) !important;
+        }
+        .section-wrap {
+          display: flex;
+        }
+      }
+
+      .section-wrap {
+        flex-direction: column;
+        font-size: 20px;
+        text-align: center;
+        color: #010101;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        display: none;
+        @include extra-small-devices {
+          display: flex;
+        }
+        @include small-devices {
+          display: flex;
+        }
+        @include medium-devices {
+          display: flex;
+        }
+      }
+    }
+
+    .image-1 {
+      padding: 5px;
+      width: 50%;
+
+      @include extra-small-devices {
+        width: 100%;
+      }
+      @include small-devices {
+        width: 100%;
+      }
+
+      .filter {
+        background-image: url(../image/artificial-new-1.gif);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        // border-right: 14.5px solid #4285f4;
+        // border-bottom: 14.5px solid #db4437;
+      }
+    }
+
+    .image-2 {
+      padding: 5px 5px 5px 0;
+      width: 50%;
+
+      @include extra-small-devices {
+        width: 100%;
+      }
+      @include small-devices {
+        width: 100%;
+      }
+
+      .filter {
+        background-image: url(../image/team-new1.gif);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        // border-left: 7.5px solid #4285f4;
+        // border-bottom: 14.5px solid #f4b400;
+      }
+    }
+
+    .image-3 {
+      padding: 0 5px 5px 5px;
+      width: 75%;
+      @include extra-small-devices {
+        width: 100%;
+      }
+      @include small-devices {
+        width: 100%;
+      }
+
+      .filter {
+        background-image: url(../image/ship-new-1.gif);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        // border-right: 14.5px solid #0f9d58;
+      }
+    }
+
+    .image-4 {
+      padding: 0 5px 5px 0;
+      width: 25%;
+      @include extra-small-devices {
+        width: 100%;
+      }
+      @include small-devices {
+        width: 100%;
+      }
+
+      .filter {
+        background-image: url(../image/image2-new.gif);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+      }
+    }
+  }
+}
